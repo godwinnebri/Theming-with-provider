@@ -6,8 +6,8 @@ class Moon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
-      width: 30,
+      height: 40,
+      width: 40,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
         gradient: LinearGradient(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theming_with_provider/application/theme_service.dart';
 import 'package:theming_with_provider/presentation/screens/theme_animation/widgets/moon.dart';
+import 'package:theming_with_provider/presentation/screens/theme_animation/widgets/star.dart';
 import 'package:theming_with_provider/presentation/screens/theme_animation/widgets/sun.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,6 +42,55 @@ class HomePage extends StatelessWidget {
                     ),
                     child: Stack(
                       children: [
+                        Positioned(
+                          top: 250,
+                          right: 50,
+                          child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 200),
+                              opacity: themeService.isDarkModeOn ? 1 : 0,
+                              child: const Star()),
+                        ),
+                        Positioned(
+                          top: 100,
+                          right: 50,
+                          child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 200),
+                              opacity: themeService.isDarkModeOn ? 1 : 0,
+                              child: const Star()),
+                        ),
+                        Positioned(
+                          top: 250,
+                          left: 60,
+                          child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 200),
+                              opacity: themeService.isDarkModeOn ? 1 : 0,
+                              child: const Star()),
+                        ),
+                        Positioned(
+                          top: 60,
+                          left: 150,
+                          child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 200),
+                              opacity: themeService.isDarkModeOn ? 1 : 0,
+                              child: const Star()),
+                        ),
+                        Positioned(
+                          top: 100,
+                          left: 50,
+                          child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 200),
+                              opacity: themeService.isDarkModeOn ? 1 : 0,
+                              child: const Star()),
+                        ),
+                        Positioned(
+                          top: 160,
+                          right: 200,
+                          child: AnimatedOpacity(
+                            duration: const Duration(milliseconds: 200),
+                            opacity: themeService.isDarkModeOn ? 1 : 0,
+                            child: const Star(),
+                          ),
+                        ),
                         AnimatedPositioned(
                           duration: const Duration(milliseconds: 400),
                           top: themeService.isDarkModeOn ? 100 : 130,
